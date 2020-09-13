@@ -1,0 +1,269 @@
+
+<html lang="en" dir="ltr">
+  <head>
+      <script type="text/javascript" src="https://codesandbox.io/public/sse-hooks/sse-hooks.js"></script>
+    <meta charset="utf-8 >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <title>Finnance</title>
+    <script src="fabric.min.js"></script>
+    <link rel="shortcut icon" href="images.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" >
+    <link rel="shortcut icon" href="images (2).png">
+<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+<link href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+  <style>
+    .topnav {
+  overflow: hidden;
+  background-color:#332500;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ffdd80;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+    .txt{
+      margin-top:50px;
+    }
+    main {
+margin-left:7%;
+    }
+
+    .text--medium {
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 400;
+      color: #ecf0f1;
+    }
+
+    .cards {
+      grid-column: 2 / span 12;
+      display: grid;
+      grid-template-columns: repeat(12, minmax(auto, 60px));
+      grid-gap: 40px;
+      height:75%
+    }
+
+    .card {
+      grid-column-end: span 4;
+      display: flex;
+      flex-direction: column;
+        background-color:#332500;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+    }
+
+    .card__image-container {
+      width: 100%;
+      padding-top: 56.25%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card__image-container img {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .card__content {
+      padding: 20px;
+    }
+
+    .card__title {
+      margin-bottom: 20px;
+    }
+
+    .card__info {
+      display: flex;
+      align-self: end;
+      align-items: center;
+    color:#ffdd80;
+    font-family: 'PT Sans', sans-serif;
+    }
+
+
+
+    @media only screen and (max-width: 900px) {
+      .card {
+        grid-column-end: span 6;
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      main {
+        grid-gap: 20px;
+      }
+      .card {
+        grid-column-end: span 12;
+      }
+    }
+
+    @media only screen and (max-width: 300px) {
+      main {
+
+        grid-gap: 10px;
+      }
+      .cards {
+        grid-column: 2 / span 6;
+
+      }
+      .card {
+        grid-column-end: span 6;
+      }
+    }
+      </style>
+<body>
+  <header><div class="topnav" id="myTopnav">
+<a  href="index.html"><i class="fa fa-home"></i> Home</a>
+<a href="Nature.html"><i class="fa fa-tree"></i> Nature</a>
+<a href="Archittecture.html"><i class="fa fa-building"></i> Architecture</a>
+<a href="finnacne.html" class="active"><i class="fa fa-line-chart"></i> Finance</a>
+<a href="humanbody.html"><i class="fa fa-male"></i> Human Body</a>
+<a href="checker.html"><i class="fa fa-check"></i> Golden Ratio Checker</a>
+<a href="persona'.html"><i class="fa fa-address-card"></i> About Me</a>
+
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+   <i class="fa fa-bars"></i>
+ </a>
+
+</div>
+</header>
+<img src="finance.png" style="width:85.5%;margin-left:6.5%">
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+  <main>
+    <section class="cards">
+      <div class="card">
+
+        <div class="card__image-container" >
+          <a href=""><img
+            src="retracement.gif"
+            alt="retracement"
+          /></a>
+        </div>
+        <div class="card__content">
+          <p class="card__title text--medium">
+           The fibonacci retracement
+           <br><br>
+           <audio src="retracement.mp3" controls style="height:10%;"></audio>
+          </p>
+          <div class="card__info">
+Fibonacci retracements use horizontal lines to indicate areas of support or resistance. Levels are calculated using the high and low points of the chart. Then five lines are drawn: the first at 100% (the high on the chart), the second at 61.8%, the third at 50%, the fourth at 38.2%, and the last one at 0% (the low on the chart).
+          </div>
+        </div>
+      </div>
+      <div class="card">
+
+        <div class="card__image-container" >
+          <a href=""><img
+            src="arcs.jfif"
+            alt="arcs"
+          /></a>
+        </div>
+        <div class="card__content">
+          <p class="card__title text--medium">
+           Fibonacci arcs
+           <br><br>
+<audio src="fans.mp3" controls style="height:10%;"></audio>
+          </p>
+          <div class="card__info">
+Finding the high and low of a chart is the first step to composing Fibonacci arcs. Then, with a compass-like movement, three curved lines are drawn at 38.2%, 50%, and 61.8% from the desired point. These lines anticipate the support and resistance levels, as well as trading ranges.
+
+
+</div>
+</div>
+</div>
+<div class="card">
+
+  <div class="card__image-container" >
+    <a href=""><img
+      src="fan.png"
+      alt="fan"
+    /></a>
+  </div>
+  <div class="card__content">
+    <p class="card__title text--medium">
+     Fibonacci fans
+     <br><br>
+     <audio src="arcs.mp3" controls style="height:10%;"></audio>
+    </p>
+    <div class="card__info">
+      Fibonacci fans are composed of diagonal lines. After the high and low of the chart is located, an invisible vertical line is drawn through the rightmost point. This invisible line is then divided into 38.2%, 50%, and 61.8%, and lines are drawn from the leftmost point through each of these points. These lines indicate areas of support and resistance.
+</div>
+</div>
+</div>
+
+
+
+
+  </main>
+
+
+
+      </body>
+</html>
